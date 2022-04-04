@@ -1,21 +1,24 @@
-let data = require("./data");
+//let data = require("./data");
 
 class jogo {
     constructor(flags, movies){
         this.bandeiras = flags;
         this.filmes = movies;
+        this.deck = [];
         
 
     }
 
-    embaralhadorBandeiras(){
-     const position = []
+    embaralhadorBandeiras(card){
 
-     for(let i = 0; i < this.bandeiras.imagem.length; i++) {
+     for(let i = 0; i < 9; i++) {
 
+        const idx = Math.floor(Math.random()*this.bandeiras.length);
+        card[i].setAttribute('src',this.bandeiras[idx].imagem)
+        this.deck.push(this.bandeiras[idx]);
      }
         
-
+     console.log(deck) 
     }
 
     embaralhadorFilmes(){
