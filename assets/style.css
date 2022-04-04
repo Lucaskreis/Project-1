@@ -22,6 +22,9 @@ header{
     align-items: center;
 
 }
+#btnFlags {
+    margin: 15px;
+}
 
 #bandeiras {
     display: flex;
@@ -82,4 +85,5 @@ header{
     gap: 20px ;
 
 }
+
 
