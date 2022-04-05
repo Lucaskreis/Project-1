@@ -1,10 +1,10 @@
     const btnFlags = document.getElementById('btnFlags');
     const btnMovies = document.getElementById('btnMovies');
     const bandeiras = document.getElementById('bandeiras');
-    //const bandeirasOn = document.getElementByClass('bandeirasOn');
-    //const bandeirasOff = document.getElementByClass('bandeirasOff');
     const filmes = document.getElementsByTagName('filmes');
-    const flagImg = document.getElementsByClassName('flagImg')
+    const flagImg = document.getElementsByClassName('flagImg');
+    const input = document.getElementsByClassName('input');
+
 
     //let data = require("./data");
 
@@ -12,9 +12,25 @@
 
     btnFlags.addEventListener('click', () => {
         
-        bandeiras.classList.replace("bandeirasOff" , "bandeirasOn")  
+        bandeiras.classList.replace("bandeirasOff" , "bandeirasOn");
         
         game.embaralhadorBandeiras(flagImg)
-        
+
     })
+
+    btnMovies.addEventListener('click', () => {
+        
+        filmes.classList.replace("filmesOff" , "filmesOn");
+
+        game.embaralhadorFilmes(movieImg);
+    })
+
+    //input.addEventListener('keypress', (enviar) => {
+    //    if(enviar.key === 'Enter'){
+    //        
+    //        console.log(apertou)
+            
+    //    }
+    //})
+
 

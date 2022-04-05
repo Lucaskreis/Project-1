@@ -15,19 +15,30 @@ class jogo {
 
         const idx = Math.floor(Math.random()*this.bandeiras.length);
         card[i].setAttribute('src',this.bandeiras[idx].imagem)
+        
         this.deck.push(this.bandeiras[idx]);
      }
         
      console.log(deck) 
     }
 
-    embaralhadorFilmes(){
-    // seleciona 9 imgs aleatórias de filmes
+    embaralhadorFilmes(card){
 
-    }
+            for(let i = 0; i < 9; i++) {
+       
+               const idx = Math.floor(Math.random()*this.filmes.length);
+               card[i].setAttribute('src',this.filmes[idx].frame)
+               this.deck.push(this.filmes[idx]);
+            }
+               
+            console.log(deck) 
+           }
 
-    corretorBandeiras() {
-    // checa se o input está correto
+    
+
+    corretorBandeiras(resposta) {
+        
+        if (resposta === this.deck.tag){}
 
     }
 
