@@ -1,10 +1,11 @@
     const btnFlags = document.getElementById('btnFlags');
     const btnMovies = document.getElementById('btnMovies');
     const bandeiras = document.getElementById('bandeiras');
-    const filmes = document.getElementsByTagName('filmes');
+    const filmes = document.getElementById('filmes');
     const flagImg = document.getElementsByClassName('flagImg');
-    const input = document.getElementsByClassName('input');
-
+    const movieImg = document.getElementsByClassName('movieImg');
+    const input = document.getElementsByClassName('send');
+    const inputAnswers = document.getElementsByClassName("name");
 
     //let data = require("./data");
 
@@ -22,15 +23,33 @@
         
         filmes.classList.replace("filmesOff" , "filmesOn");
 
-        game.embaralhadorFilmes(movieImg);
+        game.embaralhadorFilmes(movieImg)
+
     })
 
-    //input.addEventListener('keypress', (enviar) => {
-    //    if(enviar.key === 'Enter'){
-    //        
-    //        console.log(apertou)
-            
-    //    }
+    //input.addEventListener('click', (e) => {
+   //     e.preventDefault()
+    
+    //    const name = document.getElementsByClassName('name');
+      //  const value = name.value;
+        //console.log(value);
     //})
+        for (let i = 0; i < input.length; i++){
 
+        input[i].addEventListener("click", (e) => {
+            e.preventDefault()
 
+            let value = inputAnswers[i].value
+
+            game.corretorBandeiras(value)
+                      
+            // Comparando a resposta dada naquele input com a array de respostas certas pelo index
+            //if (inputAnswers[i].value === game.deck[i].tag) {
+                console.log(value)
+            //} else {
+                // Se tiver errado cai aqui
+           // }
+        })
+    
+    
+    }

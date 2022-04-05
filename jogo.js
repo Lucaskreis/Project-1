@@ -4,51 +4,45 @@ class jogo {
     constructor(flags, movies){
         this.bandeiras = flags;
         this.filmes = movies;
-        this.deck = [];
+        this.deckFlags = [];
+        this.deckMovies = [];
         
 
     }
 
     embaralhadorBandeiras(card){
 
-     for(let i = 0; i < 9; i++) {
+        for(let i = 0; i < 9; i++) {
 
-        const idx = Math.floor(Math.random()*this.bandeiras.length);
-        card[i].setAttribute('src',this.bandeiras[idx].imagem)
+            const idx = Math.floor(Math.random()*this.bandeiras.length);
+            card[i].setAttribute('src',this.bandeiras[idx].imagem)
+            
+            this.deckFlags.push(this.bandeiras[idx]);
+        }
         
-        this.deck.push(this.bandeiras[idx]);
-     }
-        
-     console.log(deck) 
+         
     }
 
     embaralhadorFilmes(card){
 
-            for(let i = 0; i < 9; i++) {
+        for(let i = 0; i < 9; i++) {
        
-               const idx = Math.floor(Math.random()*this.filmes.length);
-               card[i].setAttribute('src',this.filmes[idx].frame)
-               this.deck.push(this.filmes[idx]);
-            }
-               
-            console.log(deck) 
+            const idx = Math.floor(Math.random()*this.filmes.length);
+            console.log(idx)
+            card[i].setAttribute('src',this.filmes[idx].frame)
+            this.deckMovies.push(this.filmes[idx]);
+            }    
            }
 
-    
-
     corretorBandeiras(resposta) {
-        
-        if (resposta === this.deck.tag){}
+        let counter = 0
+        for(let i = 0; i < this.deckFlags.length; i++) {
+        if (resposta === this.deckFlags[i].tag){
+            counter++
+            console.log(counter) 
+        }
 
-    }
+    }}
 
-    corretorBandeiras() {
-    // checa se o input está correto
     
-    }
-
-    telaFinal() {
-    // mostra a tela final com o resultado
-
-    }
 }
