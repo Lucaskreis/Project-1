@@ -43,24 +43,24 @@ header{
     font-size: 35px;
 }
 
-.grid {
-    width: 1600px;
+#grid1 {
+    width: 1400px;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    gap: 40px ;
-    
-
-    
+    gap: 100px ;    
 }
 
-.bloco {
+
+.bloco1 {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px ;
+    
+    
 
 }
 
