@@ -35,14 +35,14 @@ header{
     color:  rgb(81, 186, 194);
     border-radius: 10px;
     height: 40px;
-    width: 140px;
+    width: 150px;
 }
 #btnMovies{
     background-color: black;
     color: rgb(81, 186, 194);
     border-radius: 10px;
     height: 40px;
-    width: 140px;
+    width: 150px;
 }
 .tema {
     display: flex;
