@@ -33,7 +33,7 @@ let flags = [
     {imagem: "./assets/images/Bandeiras/panama.jpg",
     tag: "panama"},
     {imagem: "./assets/images/Bandeiras/paquistão.jpg",
-    tag: "paquistão"},
+    tag: "paquistao"},
     {imagem: "./assets/images/Bandeiras/peru.jpg",
     tag: "peru"},
     {imagem: "./assets/images/Bandeiras/portugal.jpg",

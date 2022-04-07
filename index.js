@@ -6,8 +6,10 @@
     const movieImg = document.getElementsByClassName('movieImg');
     const grid1 = document.getElementById('grid1');
     const grid2 = document.getElementById('grid2');
-   const btn1 = document.getElementsByClassName('btn1');
-   const text1 = document.getElementsByClassName('text1');
+    const btn1 = document.getElementsByClassName('btn1');
+    const text1 = document.getElementsByClassName('text1');
+    const resetBtn = document.querySelector('#resetBtn')
+    const resetBtn2 = document.querySelector('#resetBtn2')
  
 
 
@@ -47,30 +49,36 @@
         form1.appendChild(inputText)
         form1.appendChild(inputSubmit)
         
-        console.log(img)
+       
+        resetBtn.addEventListener("click", function() {
+             location.reload();})
+            
+        
         let counter1 = 0
         inputSubmit.addEventListener('click', (e) => {
             e.preventDefault()
+            const value1 = inputText.value.toLowerCase();
+            game.corretorBandeiras(value1,img,inputText)
+
             
-            if(counter1 >=2){
-                alert("Sabe de nada!! Suas chances terminaram.")
+        if(value1 !== img.alt){
+            
+            if (counter1 === 1){
+                inputText.setAttribute("class", "text1red")
+                
+            }
+            else if (counter1 >= 2){
+                inputText.remove()
                 img.setAttribute("src", "./assets/images/looser.jpg" )
             }
-            /*else if(counter1 === 1){
-                alert("Béééé, errado! Você só tem mais uma chance")
-                const value1 = inputText.value;
-                console.log(value1);
-                game.corretorBandeiras(value1,img)
-                counter1++
-            }*/
-            else{
-             const value1 = inputText.value;
-             
-             game.corretorBandeiras(value1,img,inputText)
-             counter1++
-             img.setAttribute("src", "./assets/images/sabedenada.jpg" )
-            }
+            counter1++  
             console.log(counter1)
+        }else {
+            inputText.setAttribute("class", "text1green")
+            img.setAttribute("src", "./assets/images/sabedenada.jpg" )
+            }
+             
+
      })
 
     }
@@ -115,33 +123,36 @@
         
         console.log(img)
 
-        let counter1 = 0
-        inputSubmit.addEventListener('click', (e) => {
-            e.preventDefault()
-            
-            if(counter1 >=2){
-                alert("Sabe de nada!! Suas chances terminaram.")
-                img.setAttribute("src", "./assets/images/looser.jpg" )
-            }
-            /*else if(counter1 === 1){
-                alert("Béééé, errado! Você só tem mais uma chance")
-                const value1 = inputText.value;
-                console.log(value1);
-                game.corretorBandeiras(value1,img)
-                counter1++
-            }*/
-            else{
-             const value1 = inputText.value;
-             
-             game.corretorFilmes(value1,img,inputText)
-             counter1++
-             if (value1===img.alt){
-             img.setAttribute("src", "./assets/images/sabedenada.jpg" )
-            }
-            }
-            console.log(counter1)
-     })
+        resetBtn2.addEventListener("click", function() {
+            location.reload();})
+           
+       
+       let counter1 = 0
+       inputSubmit.addEventListener('click', (e) => {
+           e.preventDefault()
+           const value1 = inputText.value.toLowerCase();
+           game.corretorFilmes(value1,img,inputText)
 
+           
+       if(value1 !== img.alt){
+           
+           if (counter1 === 1){
+               inputText.setAttribute("class", "text1red")
+               
+           }
+           else if (counter1 >= 3){
+               inputText.remove()
+               img.setAttribute("src", "./assets/images/looser.jpg" )
+           }
+           counter1++  
+           console.log(counter1)
+       }else {
+           inputText.setAttribute("class", "text1green")
+           img.setAttribute("src", "./assets/images/sabedenada.jpg" )
+           }
+            
+
+    })
     }
         game.embaralhadorFilmes(movieImg)
 
