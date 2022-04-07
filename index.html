@@ -5,111 +5,61 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300&family=Poppins:wght@100;200;300&family=Source+Sans+Pro:wght@200;300;400&display=swap" rel="stylesheet">
     <title>Sabe de nada!</title>
 </head>
 <body>
     <header>
-        <div class="logo"> <h1>Sabe de nada!</h1> </div>
-        <div class="tema"> 
+        <div class="logo">
+            <img src="./assets/images/logo.png" alt="logo sabe de nada">
+            <div class="tema"> 
 
-            <h2>Escolha o tema</h2>
-            <h5>Bandeiras de paises</h5>
-            <h5>Filmes</h5>
-
+                <h2> <i> <b> Escolha o tema </b></i></h2>
+                <div id="btn">
+                    <button id="btnFlags"> <b>Bandeiras de países</b></button>
+                    <button id="btnMovies"> <b>Filmes</b> </button>
+                </div>
+    
+            </div>
         </div>
-
-
+    
     </header>
 
-    <section id="bandeiras">
-        <h2>Bandeiras de paises</h2>
-        <div class="grid">
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/australia.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/austria.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/belgica.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/bolivia.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/coreia-do-sul.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/egito.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/equador.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/eua.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Bandeiras/haiti.jpg" alt="imagem aleatória de bandeira">
-                <input type="text">
-            </div>
+    <section id="bandeiras" class="bandeirasOff">
+        <h2>Bandeiras de países</h2>
+        <ul class="ul" >
+            <li>Você tem três tentativas por bandeira</li>
+            <li>Não use acentos ou caracterer especiais</li>
+            <button id="resetBtn">Reset</button>
+            
+        </ul>
+        <div id="grid1">
+            
         </div>
+        <hr>
     </section>
 
-    <section id="filmes">
+    <section id="filmes" class="filmesOff">
         
         <h2>Filmes</h2>
-        <div class="grid">
-            <div class="bloco">
-                <img src="./assets/images/Filmes/2011-uma-odisseia-no-espaço.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/a-vida-de-pi.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/a-vida-de-truman.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/blade-runner.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/cars.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/cidade-de-deus.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/clube-da-luta.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/crepusculo.jpg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
-            <div class="bloco">
-                <img src="./assets/images/Filmes/de-volta-para-o-futuro.jpeg" alt="imagem aleatória de filme">
-                <input type="text">
-            </div>
+        <ul class="ul" >
+            <li>Você tem quatro tentativas por bandeira</li>
+            <li>Não use acentos ou caracterer especiais</li>
+            <button id="resetBtn2">Reset</button>
+            
+        </ul>
+        <div id="grid2">
+            
         </div>
     </section>
 
+    <br><br><br>
 
-    <div>
-        Parabéns você acertou <h6></h6>
-    </div>
+    <script src="./data.js"></script>
+    <script src="./jogo.js"></script>
+    <script src="./index.js"></script>
     
 </body>
 </html>
